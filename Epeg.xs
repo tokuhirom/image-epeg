@@ -12,10 +12,6 @@ extern "C"
 }
 #endif
 
-static char *CLASS = 0;
-
-
-
 /*
  *	Epeg Headers
  */
@@ -72,7 +68,6 @@ _epeg_file_open( filename )
 	PREINIT:
 		int h, w;
 	CODE:
-		CLASS = "Epeg_Image";
 		RETVAL = (Epeg_Image *)epeg_file_open( filename );
 	OUTPUT:
 		RETVAL
@@ -83,7 +78,6 @@ _epeg_memory_open( data, dataLen );
 	unsigned char * data;
 	int dataLen;
 	CODE:
-		CLASS = "Epeg_Image";
 		RETVAL = (Epeg_Image *)epeg_memory_open( data, dataLen );
 	OUTPUT:
 		RETVAL

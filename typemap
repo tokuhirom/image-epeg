@@ -7,7 +7,7 @@ OUTPUT
 # The perl object is blessed into 'CLASS' which should
 # be a char * having the name of the package for the blessing.
 O_OBJECT
-	sv_setref_pv( $arg, CLASS, (void*)$var );
+	sv_setref_pv( $arg, "Epeg_Image", (void*)$var );
 
 #
 # I have no idea what this does...
