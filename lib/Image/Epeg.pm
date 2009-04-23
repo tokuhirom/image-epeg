@@ -227,6 +227,8 @@ The resize() method can only be used to downsize images. If neither the width or
 
 Michael Curtis E<lt>mike@beatbot.comE<gt>
 
+And, some patched by tokuhirom.
+
 =head1 SEE ALSO
 
 L<http://gatekeeper.dec.com/pub/BSD/NetBSD/NetBSD-current/pkgsrc/graphics/epeg/README.html>
