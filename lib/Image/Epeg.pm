@@ -201,7 +201,7 @@ Perl wrapper to the ultra-fast jpeg manipulation library "Epeg". This library ca
 
 =over 4
 
-=item * new( [filname|data ref] )
+=item * new( [filename|data ref] )
 
 =item * get_height()
 
