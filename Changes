@@ -1,0 +1,38 @@
+Revision history for Perl extension Epeg.
+
+0.07  6/3/2005
+    - Fixed double free error in the case of a failed write_file()
+      or get_data().
+
+0.06  5/26/2005
+    - Added destructor that handles _epeg_close() when the object
+      goes out of scope. 
+
+0.05  4/27/2005
+    - Modified to catch error codes from epeg_encode() and not 
+      attempt to free memory twice.
+    - Changed get_data() to return undef on failure.
+    - Changed write_file() to return 1 on success undef on failure.
+    - Changed set_quality() to normalize the input value.
+    - Changed resize() to return undef when attempting to size up
+      or scale to the same wxh as the original image.
+
+0.04  4/23/2005
+    - Fixed divide by zero error in resize if an image is garbage
+      and has zero width or height. 
+    - Changed to round up when resizing in MAINTAIN_ASPECT_RATIO
+      mode.
+
+0.03  4/17/2005
+    - Added test cases
+    - Cleaned up POD documentation
+
+0.02  4/15/2005
+    - Revised API to handle opening from data reference and opening 
+      from a file in new()
+    - Added get_comment(), set_comment()
+    - Added more test cases
+
+0.01  4/13/2005
+    - original version; created by h2xs 1.21 with options
+        -n EPEG /usr/local/include/Epeg.h
