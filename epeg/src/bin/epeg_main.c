@@ -5,9 +5,9 @@
 #include <string.h>
 
 static int verbose_flag = 0;
-static int thumb_width = 0; // < 0 means % of input
-static int thumb_height = 0; // < 0 means % of input
-static int max_dimension = 0; // > 0 means we reduce max(w,h) to max_dimension, with aspect preserved
+static int thumb_width = 0; 
+static int thumb_height = 0; 
+static int max_dimension = 0; 
 static char *thumb_comment = NULL;
 static int thumb_quality = 80;
 static struct option long_options[] =
@@ -59,7 +59,7 @@ main(int argc, char **argv)
 	       fprintf(stderr, "setting thumb_width to a default minimum of 64\n");
 	       thumb_width = 64;
 	   } else {
-	       // If optarg="NUMBER%" store -NUMBER (see below)
+	       
 	       if ((p = strstr(optarg, "%"))) thumb_width = -thumb_width;
 	   }
 	   if (verbose_flag) printf("thumb_width = %d\n", thumb_width);
@@ -70,7 +70,7 @@ main(int argc, char **argv)
 	       fprintf(stderr, "setting thumb_height to a default minimum of 64\n");
 	       thumb_height = 64;
 	   } else {
-	       // If optarg="NUMBER%" store -NUMBER (see below)
+	       
 	       if ((p = strstr(optarg, "%"))) thumb_height = -thumb_height;
 	   }
 	   if (verbose_flag) printf("thumb_height = %d\n", thumb_height);
@@ -135,11 +135,11 @@ main(int argc, char **argv)
        if (verbose_flag) printf("Image size: %ix%i\n", w, h);
 
        if (thumb_width < 0) {
-	   // This means we want %thumb_width of w
+	   
 	   thumb_width = w * (-thumb_width) / 100;
        }
        if (thumb_height < 0) {
-	   // This means we want %thumb_height of h
+	   
 	   thumb_height = h * (-thumb_height) / 100;
        }
 

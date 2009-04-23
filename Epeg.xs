@@ -16,9 +16,9 @@ static char *CLASS = 0;
 
 
 
-//
-//	Epeg Headers
-//
+/*
+ *	Epeg Headers
+ */
 
 #include "epeg/src/lib/Epeg.h"
 
@@ -32,9 +32,9 @@ not_here(char *s)
 
 
 
-//
-//	Constants
-//
+/*
+ *	Constants
+ */
 
 static double
 constant(char *name, int len, int arg)
@@ -45,9 +45,9 @@ constant(char *name, int len, int arg)
 
 
 
-//
-//	Wrapper
-//
+/*
+ *	Wrapper
+ */
 
 MODULE = Image::Epeg		PACKAGE = Image::Epeg		
 
