@@ -231,6 +231,6 @@ And, some patched by tokuhirom.
 
 =head1 SEE ALSO
 
-L<http://gatekeeper.dec.com/pub/BSD/NetBSD/NetBSD-current/pkgsrc/graphics/epeg/README.html>
+L<http://svn.enlightenment.org/svn/e/trunk/OLD/epeg/>
 
 =cut
