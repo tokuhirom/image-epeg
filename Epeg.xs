@@ -1,3 +1,5 @@
+#include "epeg/src/lib/epeg_main.c"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -17,7 +19,7 @@ static char *CLASS = 0;
 //	Epeg Headers
 //
 
-#include </usr/local/include/Epeg.h>
+#include "epeg/src/lib/Epeg.h"
 
 
 static int

@@ -1,7 +1,5 @@
 use ExtUtils::MakeMaker;
 
-$ROOT       = "/usr/local";
-
 WriteMakefile
 (
 	'NAME'			=> 'Image::Epeg',
@@ -10,8 +8,7 @@ WriteMakefile
 	($] >= 5.005 ?
 		(ABSTRACT_FROM	=> 'Epeg.pm',
 		AUTHOR			=> 'Michael Curtis (mcurtis@yahoo-inc.com)') : ()),
-	'LIBS'			=> [''],
-	'LIBS'			=> "-L$ROOT/lib -lepeg" . "$LDLIBS",
+	'LIBS'			=> ['-ljpeg'],
 	'DEFINE'		=> '',
 	'INC'			=> ''
 );
