@@ -47,6 +47,8 @@ constant(char *name, int len, int arg)
 
 MODULE = Image::Epeg		PACKAGE = Image::Epeg		
 
+PROTOTYPES: disable
+
 
 double
 constant(sv,arg)
