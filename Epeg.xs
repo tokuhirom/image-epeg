@@ -18,20 +18,6 @@ extern "C"
 
 #include "epeg/src/lib/Epeg.h"
 
-
-/*
- *	Constants
- */
-
-static double
-constant(char *name, int len, int arg)
-{
-    errno = EINVAL;
-    return 0;
-}
-
-
-
 /*
  *	Wrapper
  */
@@ -39,21 +25,6 @@ constant(char *name, int len, int arg)
 MODULE = Image::Epeg		PACKAGE = Image::Epeg		
 
 PROTOTYPES: disable
-
-
-double
-constant(sv,arg)
-    PREINIT:
-		STRLEN len;
-    INPUT:
-		SV * sv
-		char * s = SvPV(sv, len);
-		int arg
-    CODE:
-		RETVAL = constant(s,len,arg);
-    OUTPUT:
-		RETVAL
-
 
 Epeg_Image *
 _epeg_file_open( filename )
