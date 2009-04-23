@@ -184,7 +184,7 @@ __END__
 
 =head1 NAME
 
-Epeg - Thumbnail jpegs at lightning speed
+Image::Epeg - Thumbnail jpegs at lightning speed
 
 =head1 SYNOPSIS
 
