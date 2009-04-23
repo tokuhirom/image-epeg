@@ -19,15 +19,6 @@ extern "C"
 #include "epeg/src/lib/Epeg.h"
 
 
-static int
-not_here(char *s)
-{
-    croak("%s not implemented on this architecture", s);
-    return -1;
-}
-
-
-
 /*
  *	Constants
  */
