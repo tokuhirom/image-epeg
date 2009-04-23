@@ -12,11 +12,14 @@ print "# GD            $GD::VERSION\n";
 print "# Image::Magick $Image::Magick::VERSION\n";
 
 my $srcfile = shift or die "Usage: $0 fname";
-my $width = 150;
-my $height = 150;
+my $src = Image::Epeg->new($srcfile);
+print "# origsize: @{[ $src->get_width ]} x @{[ $src->height ]}\n";
+my $width = int($src->get_width * 0.4);
+my $height = int($src->get_height * 0.4);
+print "# size: $width x $height\n";
 
 timethese(
-    1000 => {
+    1 => {
         epeg => sub {
             my $epeg = Image::Epeg->new( $srcfile );
             $epeg->resize( $width, $height, MAINTAIN_ASPECT_RATIO );
@@ -53,12 +56,21 @@ timethese(
         imagemagick => sub {
             my $img = Image::Magick->new;
             $img->Read($srcfile);
-            my ( $width, $height ) = $img->Get( 'width', 'height' );
             $img->Resize(
                 width  => $width,
                 height => $height,
             );
             $img->Write('imagemagick.jpg');
+        },
+        "imagemagick-lanczos" => sub {
+            my $img = Image::Magick->new;
+            $img->Read($srcfile);
+            $img->Resize(
+                width  => $width,
+                height => $height,
+                filter => 'Lanczos',
+            );
+            $img->Write('imagemagick-lanczos.jpg');
         }
     }
 );
