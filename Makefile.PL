@@ -1,14 +1,10 @@
-use ExtUtils::MakeMaker;
+use inc::Module::Install;
+name 'Image-Epeg';
+all_from 'lib/Image/Epeg.pm';
+author 'Michael Curtis (mcurtis@yahoo-inc.com)';
 
-WriteMakefile
-(
-	'NAME'			=> 'Image::Epeg',
-	'VERSION_FROM'	=> 'lib/Image/Epeg.pm',
-    'PREREQ_PM'		=> {},
-	($] >= 5.005 ?
-		(ABSTRACT_FROM	=> 'lib/Image/Epeg.pm',
-		AUTHOR			=> 'Michael Curtis (mcurtis@yahoo-inc.com)') : ()),
-	'LIBS'			=> ['-ljpeg'],
-	'DEFINE'		=> '',
-	'INC'			=> ''
-);
+libs '-ljpeg';
+
+setup_auto_repository;
+author_tests("xt");
+WriteAll;
