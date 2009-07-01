@@ -1,15 +1,17 @@
 use Test::More;
 eval q{ use Test::Spelling };
 plan skip_all => "Test::Spelling is not installed." if $@;
-add_stopwords(<DATA>);
-set_spell_cmd("aspell -l en list");
+add_stopwords(map { split /[\s\:\-]/ } <DATA>);
+$ENV{LANG} = 'C';
 all_pod_files_spelling_ok('lib');
 __DATA__
-Tatsuhiko
-Miyagawa
+Tokuhiro Matsuno
+tokuhirom  slkjfd gmail.com
+Test::SharedFork
+yappo
+Curtis
 Epeg
-filename
+downsize
 jpeg
 jpegs
-resize
-tokuhirom
+ref
