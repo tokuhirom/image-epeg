@@ -112,7 +112,7 @@ _epeg_get_data( img )
 		rc = epeg_encode( img );
 		if( !rc )
 		{
-			PUSHs(sv_2mortal(newSVpv( pOut, outSize )));
+			PUSHs(sv_2mortal(newSVpv( (char*)pOut, outSize )));
 			free(pOut);
 		}
 		else
