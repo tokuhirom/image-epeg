@@ -13,7 +13,7 @@ our @ISA = qw(Exporter DynaLoader);
 our %EXPORT_TAGS = ( 'constants' => [ qw(MAINTAIN_ASPECT_RATIO IGNORE_ASPECT_RATIO) ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'constants'} } );
 our @EXPORT = qw();
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 bootstrap Image::Epeg $VERSION;
 
@@ -227,7 +227,7 @@ The resize() method can only be used to downsize images. If neither the width or
 
 Michael Curtis E<lt>mike@beatbot.comE<gt>
 
-And, some patched by tokuhirom.
+Tokuhiro Matsuno E<lt>tokuhirom at gmail dot comE<gt>
 
 =head1 SEE ALSO
 
