@@ -1,14 +1,13 @@
+.shipit
 benchmark/simple.pl
 Changes
 Epeg.xs
-epeg/.cvsignore
 epeg/AUTHORS
 epeg/autogen.sh
 epeg/ChangeLog
 epeg/configure.in
 epeg/COPYING
 epeg/COPYING-PLAIN
-epeg/debian/.cvsignore
 epeg/debian/changelog.in
 epeg/debian/control
 epeg/debian/copyright
@@ -16,7 +15,6 @@ epeg/debian/libepeg-bin.install
 epeg/debian/libepeg-dev.install
 epeg/debian/libepeg0.install
 epeg/debian/rules
-epeg/doc/.cvsignore
 epeg/doc/e.css
 epeg/doc/epeg.css
 epeg/doc/foot.html
@@ -44,12 +42,9 @@ epeg/INSTALL
 epeg/Makefile.am
 epeg/NEWS
 epeg/README
-epeg/src/.cvsignore
-epeg/src/bin/.cvsignore
 epeg/src/bin/epeg_main.c
 epeg/src/bin/epeg_main.h
 epeg/src/bin/Makefile.am
-epeg/src/lib/.cvsignore
 epeg/src/lib/Epeg.h
 epeg/src/lib/epeg_main.c
 epeg/src/lib/epeg_private.h
@@ -74,6 +69,7 @@ README
 t/epeg_basic.t
 t/epeg_crash.jpg
 t/epeg_crash.t
+t/epeg_size_after_resize.t
 t/test.gif
 t/test.jpg
 typemap

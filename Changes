@@ -1,5 +1,11 @@
 Revision history for Perl extension Epeg.
 
+
+0.09 21/1/2009
+
+    - add get_output_width() and get_output_height()
+      (by chiba++)
+
 0.08  7/1/2009
     - modernize the package
       - use Module::Install
