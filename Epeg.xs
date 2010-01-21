@@ -59,6 +59,17 @@ _epeg_size_get( img )
 
 
 void
+_epeg_output_size_get( img )
+	Epeg_Image * img;
+	PREINIT:
+		int h, w;
+	PPCODE:
+		epeg_output_size_get( img, &w, &h );
+		XPUSHs( sv_2mortal( newSViv( w ) ) );
+		XPUSHs( sv_2mortal( newSViv( h ) ) );
+
+
+void
 _epeg_decode_size_set( img, w, h )
 	Epeg_Image * img;
 	int w;

@@ -104,6 +104,22 @@ epeg_size_get(Epeg_Image *im, int *w, int *h)
 }
 
 /**
+ * Return the output JPEG pixel size.
+ * @param im A handle to an opened Epeg image.
+ * @param w A pointer to the width value in pixels to be filled in.
+ * @param h A pointer to the height value in pixels to be filled in.
+ * 
+ * Returns the image size in pixels.
+ * 
+ */
+EAPI void
+epeg_output_size_get(Epeg_Image *im, int *w, int *h)
+{
+   if (w) *w = im->out.w;
+   if (h) *h = im->out.h;
+}
+
+/**
  * Return the original JPEG pixel color space.
  * @param im A handle to an opened Epeg image.
  * @param space A pointer to the color space value to be filled in.
