@@ -15,3 +15,4 @@ downsize
 jpeg
 jpegs
 ref
+chiba

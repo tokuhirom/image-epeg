@@ -7,7 +7,6 @@ use Carp;
 
 require Exporter;
 require DynaLoader;
-use AutoLoader;
 
 our @ISA = qw(Exporter DynaLoader);
 our %EXPORT_TAGS = ( 'constants' => [ qw(MAINTAIN_ASPECT_RATIO IGNORE_ASPECT_RATIO) ] );
@@ -255,7 +254,11 @@ The resize() method can only be used to downsize images. If neither the width or
 
 Michael Curtis E<lt>mike@beatbot.comE<gt>
 
-And, some patched by tokuhirom.
+Tokuhiro Matsuno
+
+=head1 THANKS TO
+
+chiba
 
 =head1 SEE ALSO
 
