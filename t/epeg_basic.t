@@ -2,59 +2,41 @@
 
 use strict;
 use warnings;
-use Test::More tests => 8;
+use Test::More tests => 7;
 use Image::Epeg qw(:constants);
 
-my @i = stat( "t/test.jpg" );
-my $rawimgsize = $i[7];
-
-my $f = undef;
-{
-    open my $fh, "t/test.jpg";
-    $f .= $_ while <$fh>;
+# from scalarref
+do {
+    open my $fh, "t/test.jpg" or die $!;
+    my $src = do { local $/; <$fh> };
     close $fh;
-}
 
+    my $epeg = Image::Epeg->new( \$src );
+    isa_ok $epeg, 'Image::Epeg';
 
-# Test 1: new( [reference] )
-my $epeg = new Image::Epeg( \$f );
-ok defined $epeg;
+    is $epeg->get_width(), 640, 'get_width()';
+    is $epeg->get_height(), 480, 'get_height()';
 
-# Test 2: get_width()
-is $epeg->get_width(), 640;
+    $epeg->resize( 150, 150, MAINTAIN_ASPECT_RATIO );
+    $epeg->set_comment( "foobar" );
 
-# Test 3: get_height()
-is $epeg->get_height(), 480;
+    $epeg->write_file( "t/test2.jpg" );
+    ok -f "t/test2.jpg", 'saved';
+};
 
-# resize() setup
-$epeg->resize( 150, 150, MAINTAIN_ASPECT_RATIO );
+# from file
+do {
+    my $epeg = Image::Epeg->new( "t/test2.jpg" );
+    isa_ok $epeg, 'Image::Epeg';
 
-# set_comment() setup
-$epeg->set_comment( "foobar" );
+    is $epeg->get_comment(), "foobar", 'get_comment';
 
-# Test 4: save();
-$epeg->write_file( "t/test2.jpg" );
-ok -f "t/test2.jpg";
+    $epeg->set_quality( 10 );
 
-# Test 5: Expected size? 
-@i = stat( "t/test2.jpg" );
-is $i[7], 3035;
-
-
-# Test 6: new( [file] )
-$epeg = new Image::Epeg( "t/test2.jpg" );
-ok defined $epeg;
-
-# Test 7: get_comment()
-is $epeg->get_comment(), "foobar";
-
-# set_quality() setup
-$epeg->set_quality( 10 );
-
-# Test 8: get_data()
-$epeg->resize( $epeg->get_height(), $epeg->get_width() );
-my $data = $epeg->get_data();
-ok $data && length($data) == 1083;
+    $epeg->resize( $epeg->get_height(), $epeg->get_width() );
+    my $data = $epeg->get_data();
+    ok $data, 'valid response';
+};
 
 unlink 't/test2.jpg';
 
