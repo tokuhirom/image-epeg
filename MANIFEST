@@ -66,6 +66,7 @@ MANIFEST			This list of files
 META.yml
 ppport.h
 README
+t/00_compile.t
 t/epeg_basic.t
 t/epeg_crash.jpg
 t/epeg_crash.t

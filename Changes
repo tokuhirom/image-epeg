@@ -1,5 +1,9 @@
 Revision history for Perl extension Epeg.
 
+0.10
+
+    - fixed test case with libjpeg>6.2(pointed by chiba++)
+    - fixed deps for Test::More
 
 0.09 21/1/2009
 
