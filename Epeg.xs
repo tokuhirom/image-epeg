@@ -149,3 +149,11 @@ _epeg_close( img )
 	Epeg_Image * img;
 	CODE:
 		epeg_close( img );
+
+int
+_epeg_libjpeg_version()
+    CODE:
+        RETVAL=JPEG_LIB_VERSION;
+    OUTPUT:
+        RETVAL
+
