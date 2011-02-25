@@ -8,7 +8,7 @@ libs '-ljpeg';
 use_ppport 3.19;
 
 if ($^O eq 'MSWin32') {
-    cc_optimize_flags '-DBUILDING_DLL';
+    cc_optimize_flags('-DBUILDING_DLL');
 }
 
 test_requires 'Test::More' => 0.94;

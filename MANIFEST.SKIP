@@ -30,3 +30,4 @@ cover_db
 nytprof
 perltidy.ERR$
 Epeg.[co]$
+^ppport.h$

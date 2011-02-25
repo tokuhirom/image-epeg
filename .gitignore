@@ -8,3 +8,4 @@ Epeg.o
 blib/
 pm_to_blib
 ppport.h
+Image-Epeg-*/
