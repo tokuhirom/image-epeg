@@ -124,6 +124,7 @@ _epeg_get_data( img )
 		if( !rc )
 		{
 			PUSHs(sv_2mortal(newSVpv( (char*)pOut, outSize )));
+#undef free /* Don't put any code that needs 'free' redefined below this point */
 			free(pOut);
 		}
 		else
