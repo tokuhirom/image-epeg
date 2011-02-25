@@ -5,9 +5,11 @@ author 'Michael Curtis (mcurtis@yahoo-inc.com)';
 
 libs '-ljpeg';
 
+use_ppport 3.19;
+
 if ($^O eq 'MSWin32') {
     cc_optimize_flags '-DBUILDING_DLL';
-};
+}
 
 test_requires 'Test::More' => 0.94;
 auto_set_repository();
