@@ -11,6 +11,7 @@ my $rawimgsize = $i[7];
 my $f = undef;
 {
     open my $fh, "t/test.jpg";
+    binmode $fh;
     $f .= $_ while <$fh>;
     close $fh;
 }

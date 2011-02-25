@@ -8,6 +8,7 @@ use Image::Epeg qw(:constants);
 # from scalarref
 do {
     open my $fh, "t/test.jpg" or die $!;
+    binmode $fh;
     my $src = do { local $/; <$fh> };
     close $fh;
 
