@@ -10,6 +10,6 @@ if ($^O eq 'MSWin32') {
 };
 
 test_requires 'Test::More' => 0.94;
-setup_auto_repository;
+auto_set_repository();
 author_tests("xt");
 WriteAll;
