@@ -1,5 +1,9 @@
 Revision history for Perl extension Epeg.
 
+0.11 to be released
+
+    - Win32 build fixes, t/epeg_basic.t still crashes on Win32
+
 0.10
 
     - fixed test case with libjpeg>6.2(pointed by chiba++)
