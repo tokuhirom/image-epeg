@@ -1,4 +1,10 @@
 #include "epeg/src/lib/epeg_main.c"
+#include <stdlib.h>
+
+/* Perl5 overwrites original free(3) function. save it. */
+int orig_free(void *x) {
+    free(x);
+}
 
 #ifdef __cplusplus
 extern "C"
@@ -124,7 +130,7 @@ _epeg_get_data( img )
 		if( !rc )
 		{
 			PUSHs(sv_2mortal(newSVpv( (char*)pOut, outSize )));
-			free(pOut);
+			orig_free(pOut);
 		}
 		else
 		{
