@@ -1,5 +1,8 @@
 benchmark/simple.pl
 Changes
+Epeg.bs
+Epeg.c
+Epeg.o
 Epeg.xs
 epeg/AUTHORS
 epeg/autogen.sh
@@ -74,5 +77,11 @@ t/epeg_size_after_resize.t
 t/test.gif
 t/test.jpg
 typemap
+xt/01_podspell.t
+xt/02_perlcritic.t
+xt/03_pod.t
+xt/04_minimum_version.t
+xt/05_cpan_meta.t
+xt/06_meta_author.t
 xt/97_podspell.t
 xt/99_pod.t
