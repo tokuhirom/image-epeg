@@ -1,5 +1,9 @@
 Revision history for Perl extension Epeg.
 
+0.13
+
+    - Modernize package for better kwalitee
+
 0.12
 
     - Win32 work fix, t/epeg_basic.t now passes on Win32(Corion)

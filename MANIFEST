@@ -1,8 +1,5 @@
 benchmark/simple.pl
 Changes
-Epeg.bs
-Epeg.c
-Epeg.o
 Epeg.xs
 epeg/AUTHORS
 epeg/autogen.sh
@@ -83,5 +80,4 @@ xt/03_pod.t
 xt/04_minimum_version.t
 xt/05_cpan_meta.t
 xt/06_meta_author.t
-xt/97_podspell.t
 xt/99_pod.t

@@ -12,7 +12,7 @@ our @ISA = qw(Exporter DynaLoader);
 our %EXPORT_TAGS = ( 'constants' => [ qw(MAINTAIN_ASPECT_RATIO IGNORE_ASPECT_RATIO) ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'constants'} } );
 our @EXPORT = qw();
-our $VERSION = '0.12';
+our $VERSION = '0.13';
 
 bootstrap Image::Epeg $VERSION;
 
