@@ -1,5 +1,9 @@
 Revision history for Perl extension Epeg.
 
+0.14
+
+    - Deprecate the module.
+
 0.13
 
     - Modernize package for better kwalitee
