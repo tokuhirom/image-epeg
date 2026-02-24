@@ -11,6 +11,8 @@ if ($^O eq 'MSWin32') {
     cc_optimize_flags('-DBUILDING_DLL');
 }
 
+add_metadata x_deprecated => 1;
+
 test_requires 'Test::More' => 0.98;
 auto_set_repository();
 author_tests("xt");

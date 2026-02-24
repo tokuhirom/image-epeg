@@ -1,5 +1,10 @@
 Revision history for Perl extension Epeg.
 
+0.15
+
+    set deprecated meta
+    https://neilb.org/2015/01/17/deprecated-metadata.html
+
 0.14
 
     - Deprecate the module.
