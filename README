@@ -1,6 +1,13 @@
 Epeg version 0.03
 =================
 
+** DEPRECATED **
+
+This module is deprecated and should not be used.
+The upstream epeg library has known bugs and is no longer maintained.
+
+** DEPRECATED **
+
 Epeg is a perl extension for the The Enlightenment Project's Epeg
 library. It must be installed prior to installing this module.
 
