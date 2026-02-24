@@ -16,7 +16,7 @@ our $VERSION = '0.13';
 
 bootstrap Image::Epeg $VERSION;
 
-warn "Image::Epeg is deprecated. The upstream epeg library has known bugs that will not be fixed. Please do not use this module.\n";
+warn "Image::Epeg is deprecated. The upstream epeg library has known bugs and is no longer maintained. Please do not use this module.\n";
 
 use constant MAINTAIN_ASPECT_RATIO => 1;
 use constant IGNORE_ASPECT_RATIO => 2;
@@ -216,7 +216,7 @@ __END__
 Image::Epeg - Thumbnail jpegs at lightning speed
 
 B<DEPRECATED>: This module is deprecated and should not be used.
-The upstream epeg library has known bugs that will not be fixed.
+The upstream epeg library has known bugs and is no longer maintained.
 
 =head1 SYNOPSIS
 
